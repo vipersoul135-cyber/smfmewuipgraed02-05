@@ -259,17 +259,26 @@ h2 {
 @media (max-width: 576px) {
     .grid:not(.list-view) {
         display: grid !important;
-        grid-template-columns: 1fr !important; /* Force single column grid on mobile if not in list-view class */
+        grid-template-columns: repeat(2, 1fr) !important; /* Two products per line on mobile */
+        gap: 10px !important;
     }
 
-    /* Standard mobile card for grid view (single column) */
-    .product-card {
-        padding: 15px;
+    .grid:not(.list-view) .product-card {
+        padding: 10px !important;
     }
 
-    .product-card img {
-        width: 100px;
-        height: 100px;
+    .grid:not(.list-view) .product-card img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .grid:not(.list-view) .product-card h4 {
+        font-size: 13px !important;
+        height: 38px !important;
+    }
+
+    .grid:not(.list-view) .product-card .price {
+        font-size: 14px !important;
     }
 
     /* Small screen list-view adjustments */

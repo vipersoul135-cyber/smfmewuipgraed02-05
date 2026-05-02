@@ -378,11 +378,25 @@ h2.page-title {
 
 @media (max-width: 480px) {
     .grid-view {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; /* Smaller gap for mobile */
     }
     
-    .list-view .product-card img {
-        width: 80px;
+    .grid-view .product-card {
+        padding: 10px; /* Less padding to fit two products */
+    }
+
+    .grid-view .product-card img {
+        width: 80px; /* Slightly smaller images to fit */
         height: 80px;
+    }
+
+    .grid-view .product-card h4 {
+        font-size: 13px; /* Smaller font to fit 2-column layout */
+        height: 38px; /* Adjust height for 2 lines */
+    }
+
+    .grid-view .product-card .price {
+        font-size: 14px;
     }
 }
