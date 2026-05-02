@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #757575;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: #232f3e;
+            color: white;
+            width: 100%;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .back-btn {
+            color: #ff9900;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.2);
+            color: white;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            width: 90%;
+            background: #232f3e;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            color: #ff9900;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            background: #1a222c;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 3px solid #ff9900;
+        }
+
+        .stat-item h4 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+        }
+
+        .stat-item p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="back-btn">⬅</a>
+        <h2>ABOUT US</h2>
+    </div>
+
+    <div class="content-container">
+        <h3>Our Journey</h3>
+        <p>
+            SMF Gym & Supplements, home to the <strong>Sri Babu Power Lifting Academy</strong>, was founded with a
+            single goal:
+            to provide a professional and motivating environment for fitness enthusiasts of all levels.
+            Whether you are a beginner looking to get in shape or a professional athlete training for your next
+            competition,
+            we have the equipment and expertise to help you succeed.
+        </p>
+
+        <p>
+            We believe in transparency, hard work, and high-quality nutrition. That's why we carry a curated range of
+            premium supplements to fuel your workouts and optimize your recovery.
+        </p>
+
+        <div class="stats">
+            <div class="stat-item">
+                <h4>10+</h4>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h4>500+</h4>
+                <p>Happy Members</p>
+            </div>
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>Dedication</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

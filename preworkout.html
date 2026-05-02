@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Workout - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+
+    <h2 class="page-title">Pre-Workout</h2>
+
+    <div class="controls-bar">
+        <span style="font-weight: 600; color: #666;">10 Products</span>
+        <div class="view-toggles">
+            <button id="viewToggle" class="toggle-btn" onclick="toggleView()">📋 List View</button>
+        </div>
+    </div>
+
+    <div class="products-container grid-view">
+        <!-- Product 1 -->
+        <div class="product-card" onclick="openProductModal('Pre-Workout 1', ['img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg'], 1150, 'High-intensity formula for explosive energy and focus.')">
+            <img src="img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Pre-Workout 1</h4>
+                <p class="price">₹1150</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 1', 1150, 'img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 2', ['img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg'], 1200, 'Advanced pre-workout for maximum endurance.')">
+            <img src="img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Pre-Workout 2</h4>
+                <p class="price">₹1200</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 2', 1200, 'img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 3', ['img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp'], 1250, 'Powerful nitric oxide booster for massive pumps.')">
+            <img src="img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Pre-Workout 3</h4>
+                <p class="price">₹1250</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 3', 1250, 'img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" onclick="openProductModal('Pre-Workout 4', ['img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp'], 1300, 'Clean energy and mental clarity.')">
+            <img src="img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Pre-Workout 4</h4>
+                <p class="price">₹1300</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 4', 1300, 'img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 5', ['img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp'], 1350, 'Ultra-concentrated pre-workout formula.')">
+            <img src="img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Pre-Workout 5</h4>
+                <p class="price">₹1350</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 5', 1350, 'img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 6', ['img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp'], 1400, 'Boost your strength and power.')">
+            <img src="img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Pre-Workout 6</h4>
+                <p class="price">₹1400</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 6', 1400, 'img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 7', ['img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg'], 1450, 'Fuel your workout with the best.')">
+            <img src="img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Pre-Workout 7</h4>
+                <p class="price">₹1450</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 7', 1450, 'img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 8', ['img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg', 'img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp'], 1500, 'Energy that lasts as long as you do.')">
+            <img src="img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Pre-Workout 8</h4>
+                <p class="price">₹1500</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 8', 1500, 'img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 9', ['img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp'], 1550, 'Superior mind-muscle connection.')">
+            <img src="img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Pre-Workout 9</h4>
+                <p class="price">₹1550</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 9', 1550, 'img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Pre-Workout 10', ['img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg'], 1700, 'Ultimate performance booster.')">
+            <img src="img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Pre-Workout 10</h4>
+                <p class="price">₹1700</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Pre-Workout 10', 1700, 'img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="slider-container">
+                <button class="slider-btn left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="Product Detail">
+                <button class="slider-btn right" onclick="changeImage(1)">&#10095;</button>
+                <div id="imageCounter" style="position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:4px 8px; border-radius:10px; font-size:12px;">1 / 1</div>
+            </div>
+            <h2 id="modalName"></h2>
+            <p id="modalPrice" class="price"></p>
+            <p id="modalDesc" style="margin: 15px 0; color: #555; font-size: 14px;"></p>
+            <button class="btn-add" style="background:#ff9900" onclick="addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]); closeModal()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

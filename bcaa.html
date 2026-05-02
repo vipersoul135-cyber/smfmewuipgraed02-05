@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCAA - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+
+    <h2 class="page-title">BCAA</h2>
+
+    <div class="controls-bar">
+        <span style="font-weight: 600; color: #666;">10 Products</span>
+        <div class="view-toggles">
+            <button id="viewToggle" class="toggle-btn" onclick="toggleView()">📋 List View</button>
+        </div>
+    </div>
+
+    <div class="products-container grid-view">
+        <!-- Product 1 -->
+        <div class="product-card" onclick="openProductModal('BCAA 1', ['img/bcca/51lMShdqW4L._AC_UL480_FMwebp_QL65_.webp', 'img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp'], 1050, 'Ultra-pure BCAA blend to support muscle recovery and hydration.')">
+            <img src="img/bcca/51lMShdqW4L._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 1</h4>
+                <p class="price">₹1050</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 1', 1050, 'img/bcca/51lMShdqW4L._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 2', ['img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp'], 1100, 'Essential amino acids for peak performance.')">
+            <img src="img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 2</h4>
+                <p class="price">₹1100</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 2', 1100, 'img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 3', ['img/bcca/61bVq3CCXJL._AC_UL480_FMwebp_QL65_.webp'], 1150, 'Support your muscles during intense training.')">
+            <img src="img/bcca/61bVq3CCXJL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 3</h4>
+                <p class="price">₹1150</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 3', 1150, 'img/bcca/61bVq3CCXJL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" onclick="openProductModal('BCAA 4', ['img/bcca/61ufE-7M9ZL._AC_UL480_FMwebp_QL65_.webp'], 1200, 'Quality BCAA for optimal results.')">
+            <img src="img/bcca/61ufE-7M9ZL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 4</h4>
+                <p class="price">₹1200</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 4', 1200, 'img/bcca/61ufE-7M9ZL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 5', ['img/bcca/71-yqH0ibeL._AC_UL480_FMwebp_QL65_.webp'], 1250, 'Maximum muscle hydration.')">
+            <img src="img/bcca/71-yqH0ibeL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 5</h4>
+                <p class="price">₹1250</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 5', 1250, 'img/bcca/71-yqH0ibeL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 6', ['img/bcca/71ADtT6A6DL._AC_UL480_FMwebp_QL65_.webp'], 1300, 'Recovery support for athletes.')">
+            <img src="img/bcca/71ADtT6A6DL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 6</h4>
+                <p class="price">₹1300</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 6', 1300, 'img/bcca/71ADtT6A6DL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 7', ['img/bcca/71O6JU4okLL._AC_UL480_FMwebp_QL65_.webp'], 1350, 'Energy and repair.')">
+            <img src="img/bcca/71O6JU4okLL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 7</h4>
+                <p class="price">₹1350</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 7', 1350, 'img/bcca/71O6JU4okLL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 8', ['img/bcca/71lNDCkMdbL._AC_UL480_FMwebp_QL65_.webp'], 1400, 'Great taste and results.')">
+            <img src="img/bcca/71lNDCkMdbL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 8</h4>
+                <p class="price">₹1400</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 8', 1400, 'img/bcca/71lNDCkMdbL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 9', ['img/bcca/51lMShdqW4L._AC_UL480_FMwebp_QL65_.webp'], 1450, 'Support your muscles.')">
+            <img src="img/bcca/51lMShdqW4L._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 9</h4>
+                <p class="price">₹1450</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 9', 1450, 'img/bcca/51lMShdqW4L._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('BCAA 10', ['img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp'], 1500, 'Superior BCAA formula.')">
+            <img src="img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>BCAA 10</h4>
+                <p class="price">₹1500</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('BCAA 10', 1500, 'img/bcca/61F6rcDR1ZL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="slider-container">
+                <button class="slider-btn left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="Product Detail">
+                <button class="slider-btn right" onclick="changeImage(1)">&#10095;</button>
+                <div id="imageCounter" style="position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:4px 8px; border-radius:10px; font-size:12px;">1 / 1</div>
+            </div>
+            <h2 id="modalName"></h2>
+            <p id="modalPrice" class="price"></p>
+            <p id="modalDesc" style="margin: 15px 0; color: #555; font-size: 14px;"></p>
+            <button class="btn-add" style="background:#ff9900" onclick="addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]); closeModal()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

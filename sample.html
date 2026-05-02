@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMF Gym & Supplements</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #757575;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+nav {
+    background: #232f3e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.nav-text {
+    text-align: center;
+    flex: 1;
+}
+
+nav h1 {
+    margin: 2px;
+    font-size: 16px;
+}
+
+/* CONTACT */
+.contact-top {
+    background: #ff9900;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.contact-top:hover {
+    background: white;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 580px;
+    max-width: 85%;
+}
+
+.side-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-btn:first-child {
+    margin-right: 20px;
+}
+
+.side-btn:last-child {
+    margin-left: 20px;
+}
+
+.btn {
+    background: #232f3e;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background: #ff9900;
+}
+
+.Supplements {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.Supplements:hover {
+    color: #ff9900;
+}
+
+/* SOCIAL */
+.social-bottom {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px;
+}
+
+.social-bottom a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+}
+
+.social-bottom img {
+    height: 32px;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.social-bottom img:hover {
+    transform: scale(1.2);
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .side-btn {
+        flex-direction: row;
+    }
+
+    .logo img {
+        max-width: 90%;
+    }
+}
+
+        /* Auto-injected Navbar & Back-btn */
+        .navbar {
+            background: #232f3e !important;
+            color: white !important;
+            width: 100% !important;
+            padding: 15px 20px !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 99 !important;
+            margin: 0 !important;
+        }
+        .navbar h2 {
+            margin: 0 !important;
+            font-size: 22px !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            color: white !important;
+            text-align: left !important;
+            padding: 0 !important;
+        }
+        .back-btn {
+            color: #ff9900 !important;
+            text-decoration: none !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+            margin-right: 15px !important;
+            transition: transform 0.3s !important;
+            display: inline-block !important;
+        }
+        .back-btn:hover {
+            transform: scale(1.2) !important;
+            color: white !important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-text">
+        <h1>SMF GYM & SUPPLEMENTS</h1>
+        <h1>SRI BABU POWER LIFTING ACADEMY</h1>
+    </div>
+
+    <div class="contact-top">CONTACT</div>
+</nav>
+
+<div class="main">
+    <!-- Back Button -->
+    <div style="text-align: center;">
+        <button class="btn" onclick="goBack()">⬅ Back</button>
+    </div>
+
+    <div class="content">
+
+        <div class="side-btn">
+            <div class="btn" onclick="openWorkout()">WORKOUT</div>
+        </div>
+
+        <div class="center-box">
+            <div class="logo">
+                <img src="img/smf logo (1).png" alt="SMF Logo">
+            </div>
+            <div class="Supplements" onclick="Products()">SUPPLEMENTS</div>
+        </div>
+
+        <div class="side-btn">
+            <div class="btn" onclick="openDiet()">SAMPLE DIET</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- SOCIAL WITH ICONS -->
+<div class="social-bottom">
+    <a href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        <span>INSTAGRAM</span>
+    </a>
+
+    <a href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        <span>FACEBOOK</span>
+    </a>
+
+    <a href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        <span>WHATSAPP</span>
+    </a>
+</div>
+
+<script>
+function openDiet() {
+    window.location.href = "diet.html";
+}
+
+function openWorkout() {
+    window.location.href = "workout.html";
+}
+
+function Products() {
+    window.location.href = "products.html";
+}
+
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

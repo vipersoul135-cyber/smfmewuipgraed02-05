@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pre</title>
+    <link rel="stylesheet" href="responsive-style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+    <h2>Pre-Workout Products</h2>
+
+    <div class="controls-bar">
+        <div class="control-group">
+            <span id="productCount" style="font-weight: bold; color: #555;">10 Products found</span>
+        </div>
+        <div class="control-group">
+            <button class="icon-btn" onclick="openDrawer()">
+                <i data-lucide="sliders-horizontal"></i> Filter
+            </button>
+            <button class="icon-btn" id="viewToggleBtn" onclick="toggleView()">
+                <i data-lucide="list"></i> List View
+            </button>
+        </div>
+    </div>
+
+    <!-- Filter Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+    <div class="drawer" id="filterDrawer">
+        <div class="drawer-header">
+            <h3>Filters & Sorting</h3>
+            <span style="cursor: pointer; font-size: 24px;" onclick="closeDrawer()">&times;</span>
+        </div>
+        <div class="drawer-content">
+            <div class="filter-group">
+                <h4>Sort By</h4>
+                <div class="filter-option" onclick="applySort('low-high', this)">Price: Low to High</div>
+                <div class="filter-option" onclick="applySort('high-low', this)">Price: High to Low</div>
+                <div class="filter-option" onclick="applySort('name', this)">Name: A to Z</div>
+            </div>
+            <button onclick="closeDrawer()" style="width: 100%; margin-top: 20px; background: #232f3e; color: white;">Apply</button>
+        </div>
+    </div>
+
+    <div class="grid">
+        <!-- 10 Product Cards -->
+        <div class="product-card" onclick="openModal('Pre 1', ['img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg'], 1050, 'High-intensity pre-workout formula for explosive energy and focus.')">
+            <img src="img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg" alt="Product 1">
+            <div class="product-info">
+                <h4>Pre 1</h4>
+                <p class="price">₹1050</p>
+                <p class="description">Description for Pre 1</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 1',1050)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 1',1050)">Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" onclick="openModal('Pre 2', ['img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg'], 1100, 'Advanced pre-workout blend to boost nitric oxide and blood flow.')">
+            <img src="img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg" alt="Product 2">
+            <div class="product-info">
+                <h4>Pre 2</h4>
+                <p class="price">₹1100</p>
+                <p class="description">Description for Pre 2</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 2',1100)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 2',1100)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 3', ['img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp'], 1150, 'Maximized performance and endurance for your toughest sessions.')">
+            <img src="img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg" alt="Product 3">
+            <div class="product-info">
+                <h4>Pre 3</h4>
+                <p class="price">₹1150</p>
+                <p class="description">Description for Pre 3</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 3',1150)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 3',1150)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 4', ['img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp'], 1200, 'Sharp focus and clean energy with no crash.')">
+            <img src="img/pre/61HtYL9PtoL._AC_UL480_FMwebp_QL65_.webp" alt="Product 4">
+            <div class="product-info">
+                <h4>Pre 4</h4>
+                <p class="price">₹1200</p>
+                <p class="description">Description for Pre 4</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 4',1200)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 4',1200)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 5', ['img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp'], 1250, 'Ultimate pump formula for skin-splitting vascularity.')">
+            <img src="img/pre/61dJqj553OL._AC_UL480_FMwebp_QL65_.webp" alt="Product 5">
+            <div class="product-info">
+                <h4>Pre 5</h4>
+                <p class="price">₹1250</p>
+                <p class="description">Description for Pre 5</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 5',1250)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 5',1250)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 6', ['img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg'], 1300, 'Potent stimulant blend for extreme training sessions.')">
+            <img src="img/pre/61z9hG6oAbL._AC_UL480_FMwebp_QL65_.webp" alt="Product 6">
+            <div class="product-info">
+                <h4>Pre 6</h4>
+                <p class="price">₹1300</p>
+                <p class="description">Description for Pre 6</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 6',1300)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 6',1300)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 7', ['img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg', 'img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp'], 1350, 'Clinically dosed ingredients for maximum efficacy.')">
+            <img src="img/pre/714ASSGWcSL._AC_UL480_FMwebp_QL65_.webp" alt="Product 7">
+            <div class="product-info">
+                <h4>Pre 7</h4>
+                <p class="price">₹1350</p>
+                <p class="description">Description for Pre 7</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 7',1350)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 7',1350)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 8', ['img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg', 'img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg'], 1400, 'Boost your metabolic rate and energy levels.')">
+            <img src="img/pre/71FvZdGl0rL._AC_SX416_CB1169409_QL70_.jpg" alt="Product 8">
+            <div class="product-info">
+                <h4>Pre 8</h4>
+                <p class="price">₹1400</p>
+                <p class="description">Description for Pre 8</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 8',1400)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 8',1400)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 9', ['img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp', 'img/pre/6156cRLN7qL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg'], 1450, 'Enhance cognitive function and mind-muscle connection.')">
+            <img src="img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp" alt="Product 9">
+            <div class="product-info">
+                <h4>Pre 9</h4>
+                <p class="price">₹1450</p>
+                <p class="description">Description for Pre 9</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 9',1450)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 9',1450)">Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openModal('Pre 10', ['img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/611WGyRMg8L._AC_SX644_CB1169409_QL70_.jpg', 'img/pre/71pKmHns8IL._AC_UL480_FMwebp_QL65_.webp'], 1500, 'Superior endurance and recovery support.')">
+            <img src="img/pre/61BcVRo63VL._AC_SX644_CB1169409_QL70_.jpg" alt="Product 10">
+            <div class="product-info">
+                <h4>Pre 10</h4>
+                <p class="price">₹1500</p>
+                <p class="description">Description for Pre 10</p>
+                <button onclick="event.stopPropagation(); orderNow('Pre 10',1500)">Order</button>
+                <button onclick="event.stopPropagation(); addToCart('Pre 10',1500)">Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART -->
+    <div class="cart-btn" onclick="toggleCart()">🛒</div>
+    <div class="cart-box" id="cartBox">
+        <h3>Cart</h3>
+        <div id="cartItems"></div>
+        <h4>Total: ₹<span id="total">0</span></h4>
+        <button onclick="sendCartWhatsApp()">Order Cart</button>
+    </div>
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        const whatsappNumber = "917339563621";
+        let cart = [];
+
+        // View Toggle Logic
+        function toggleView() {
+            const grid = document.querySelector('.grid');
+            const btn = document.getElementById('viewToggleBtn');
+            grid.classList.toggle('list-view');
+            
+            if (grid.classList.contains('list-view')) {
+                btn.innerHTML = '<i data-lucide="grid"></i> Switch to Grid';
+            } else {
+                btn.innerHTML = '<i data-lucide="list"></i> Switch to List';
+            }
+            lucide.createIcons();
+        }
+
+        // Drawer Logic
+        function openDrawer() {
+            document.getElementById('filterDrawer').classList.add('active');
+            document.getElementById('drawerOverlay').style.display = 'block';
+        }
+
+        function closeDrawer() {
+            document.getElementById('filterDrawer').classList.remove('active');
+            document.getElementById('drawerOverlay').style.display = 'none';
+        }
+
+        // Sorting Logic
+        function applySort(type, el) {
+            document.querySelectorAll('.filter-option').forEach(opt => opt.classList.remove('active'));
+            if (el) el.classList.add('active');
+
+            const grid = document.querySelector('.grid');
+            const cards = Array.from(grid.querySelectorAll('.product-card'));
+
+            cards.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('.price').innerText.replace('₹', ''));
+                const priceB = parseInt(b.querySelector('.price').innerText.replace('₹', ''));
+                const nameA = a.querySelector('h4').innerText.toLowerCase();
+                const nameB = b.querySelector('h4').innerText.toLowerCase();
+
+                if (type === 'low-high') return priceA - priceB;
+                if (type === 'high-low') return priceB - priceA;
+                if (type === 'name') return nameA.localeCompare(nameB);
+                return 0;
+            });
+
+            cards.forEach(card => grid.appendChild(card));
+            closeDrawer();
+        }
+
+        function orderNow(name, price) { window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Order:\n' + name + '\nPrice: ₹' + price)}`; }
+        function addToCart(name, price) { cart.push({ name, price, total: price }); renderCart(); }
+        function renderCart() { let total = 0; let html = ""; cart.forEach((c, i) => { total += c.total; html += `${c.name} ₹${c.total} <button onclick="removeItem(${i})">X</button><br>`; }); document.getElementById("cartItems").innerHTML = html; document.getElementById("total").innerText = total; }
+        function removeItem(i) { cart.splice(i, 1); renderCart(); }
+        function toggleCart() { let box = document.getElementById("cartBox"); box.style.display = box.style.display === 'block' ? 'none' : 'block'; }
+        function sendCartWhatsApp() { if (cart.length === 0) { alert("Cart empty"); return; } let msg = "Order:\n"; let total = 0; cart.forEach(c => { msg += `${c.name} ₹${c.total}\n`; total += c.total; }); msg += `Total: ₹${total}`; window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`; }
+
+        // --- Reviews Generation Logic ---
+        function getStarsHtml(rating) {
+            let html = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) html += '★';
+                else if (i - 0.5 <= rating) html += '☆'; 
+                else html += '☆';
+            }
+            return html;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.product-card').forEach(card => {
+                const rating = (Math.random() * (5 - 4.2) + 4.2).toFixed(1);
+                const reviews = Math.floor(Math.random() * 500) + 50;
+                card.dataset.rating = rating;
+                card.dataset.reviews = reviews;
+
+                const infoDiv = card.querySelector('.product-info');
+                const priceElement = card.querySelector('.price');
+                
+                const starsDiv = document.createElement('div');
+                starsDiv.className = 'stars';
+                starsDiv.innerHTML = getStarsHtml(rating) + `<span class="review-count">(${reviews})</span>`;
+                
+                infoDiv.insertBefore(starsDiv, priceElement);
+            });
+        });
+
+        /* --- Modal Logic --- */
+        let currentModalProduct = {};
+        let modalImages = [];
+        let currentImageIndex = 0;
+
+        function openModal(name, images, price, desc) {
+            if (Array.isArray(images)) {
+                modalImages = images;
+            } else {
+                modalImages = [images];
+            }
+            currentImageIndex = 0;
+            currentModalProduct = { name, price, desc };
+            
+            updateModalImage();
+            
+            document.getElementById("modalName").innerText = name;
+            document.getElementById("modalPrice").innerText = "Price: ₹" + price;
+            document.getElementById("modalDesc").innerText = desc;
+            
+            // Find rating for the modal
+            let rating = "4.5", reviews = "120";
+            document.querySelectorAll('.product-card').forEach(card => {
+                const titleEl = card.querySelector('h4');
+                if (titleEl && titleEl.innerText === name) {
+                    rating = card.dataset.rating || rating;
+                    reviews = card.dataset.reviews || reviews;
+                }
+            });
+
+            document.getElementById("modalRatingStars").innerHTML = getStarsHtml(rating);
+            document.getElementById("modalRatingCount").innerText = `${rating} out of 5 (${reviews} global ratings)`;
+            
+            generateRandomReviews();
+
+            // Set button actions
+            document.getElementById("modalOrderBtn").onclick = () => orderNow(name, price);
+            document.getElementById("modalCartBtn").onclick = () => addToCart(name, price);
+            
+            document.getElementById("productModal").style.display = "block";
+        }
+
+        function updateModalImage() {
+            document.getElementById("modalImg").src = modalImages[currentImageIndex];
+            document.getElementById("imageCounter").innerText = `${currentImageIndex + 1} / ${modalImages.length}`;
+            
+            const displayArrows = modalImages.length > 1 ? 'flex' : 'none';
+            document.querySelectorAll('.slider-btn').forEach(btn => btn.style.display = displayArrows);
+            document.getElementById("imageCounter").style.display = modalImages.length > 1 ? 'block' : 'none';
+        }
+
+        function changeImage(direction) {
+            if (modalImages.length <= 1) return;
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = modalImages.length - 1;
+            if (currentImageIndex >= modalImages.length) currentImageIndex = 0;
+            updateModalImage();
+        }
+
+        const fakeReviewNames = ["John D.", "Sarah M.", "Alex K.", "Priya S.", "Mike T.", "Emma B."];
+        const fakeReviewTexts = [
+            "Great product! Delivered on time and tastes amazing.",
+            "Mixes really well. Have noticed good results in a few weeks.",
+            "A bit expensive, but the quality is definitely there. Highly recommend.",
+            "Love the texture and flavor. Will buy again.",
+            "Best value for money. Easily digestable and no bloating.",
+            "Genuine product. The packaging was top notch."
+        ];
+
+        function generateRandomReviews() {
+            const container = document.getElementById("modalReviewsList");
+            if (!container) return;
+            container.innerHTML = "";
+            const numReviews = Math.floor(Math.random() * 3) + 2; // 2 to 4 reviews
+            
+            for (let i = 0; i < numReviews; i++) {
+                const name = fakeReviewNames[Math.floor(Math.random() * fakeReviewNames.length)];
+                const text = fakeReviewTexts[Math.floor(Math.random() * fakeReviewTexts.length)];
+                const rating = (Math.random() * (5 - 4) + 4).toFixed(1);
+                
+                const reviewDiv = document.createElement("div");
+                reviewDiv.className = "review-item";
+                reviewDiv.innerHTML = `
+                    <div class="review-user">
+                        <span>${name}</span>
+                        <div class="stars">${getStarsHtml(rating)}</div>
+                    </div>
+                    <p class="review-text">${text}</p>
+                `;
+                container.appendChild(reviewDiv);
+            }
+        }
+
+        function closeModal() { document.getElementById("productModal").style.display = "none"; }
+        window.onclick = function(event) { let modal = document.getElementById("productModal"); if (event.target == modal) closeModal(); }
+    </script>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-image-container">
+                <button class="slider-btn left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="Product Image">
+                <button class="slider-btn right" onclick="changeImage(1)">&#10095;</button>
+                <div class="image-counter" id="imageCounter">1 / 1</div>
+            </div>
+            <h2 id="modalName"></h2>
+            <div class="modal-rating-header">
+                <div class="stars" id="modalRatingStars"></div>
+                <span class="review-count" id="modalRatingCount" style="font-size: 14px;"></span>
+            </div>
+            <p id="modalPrice" class="price"></p>
+            <p id="modalDesc" class="description" style="margin: 15px 0; color: #555; line-height: 1.6;"></p>
+            <div class="modal-buttons">
+                <button id="modalOrderBtn" style="background: #ff9900; border: none; color: black;">Order Now</button>
+                <button id="modalCartBtn" style="background: #f0c14b; border: 1px solid #a88734; color: #111;">Add to Cart</button>
+            </div>
+            <div class="modal-reviews-section">
+                <h3>Top Reviews</h3>
+                <div id="modalReviewsList"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

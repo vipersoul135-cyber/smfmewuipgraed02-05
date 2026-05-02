@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMF Fitness Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #757575;
+            color: #111;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #232f3e;
+            color: white;
+            padding: 15px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Back Button */
+
+
+        h2.section-title {
+            margin-top: 20px;
+            font-size: 28px;
+            color: #ff9900;
+        }
+
+        /* Category Grid */
+        .list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .category-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 18px;
+            color: #111;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:480px) {
+            .list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h2.section-title {
+                font-size: 22px;
+            }
+        }
+
+        /* Auto-injected Navbar & Back-btn */
+        .navbar {
+            background: #232f3e !important;
+            color: white !important;
+            width: 100% !important;
+            padding: 15px 20px !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 99 !important;
+            margin: 0 !important;
+        }
+
+        .navbar h2 {
+            margin: 0 !important;
+            font-size: 22px !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            color: white !important;
+            text-align: left !important;
+            padding: 0 !important;
+        }
+
+        .back-btn {
+            color: #ff9900 !important;
+            text-decoration: none !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+            margin-right: 15px !important;
+            transition: transform 0.3s !important;
+            display: inline-block !important;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.2) !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+
+    <h2 class="section-title">Select Category</h2>
+
+    <div class="list">
+        <div class="category-card" onclick="location.href='whey.html'">
+
+            <h3>Whey Protein</h3>
+        </div>
+        <div class="category-card" onclick="location.href='creatine.html'">
+
+            <h3>Creatine</h3>
+        </div>
+        <div class="category-card" onclick="location.href='preworkout.html'">
+
+            <h3>Pre Workout</h3>
+        </div>
+        <div class="category-card" onclick="location.href='bcaa.html'">
+
+            <h3>BCAA</h3>
+        </div>
+        <div class="category-card" onclick="location.href='eaa.html'">
+
+            <h3>EAA</h3>
+        </div>
+        <div class="category-card" onclick="location.href='gainer.html'">
+
+            <h3>Mass Gainer</h3>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

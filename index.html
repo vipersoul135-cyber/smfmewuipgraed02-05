@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMF Gym & Supplements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff9900;
+            --primary-dark: #cc7a00;
+            --secondary: #232f3e;
+            --bg-dark: #757575;
+            --nav-bg: rgba(35, 47, 62, 0.95);
+            --text-light: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            min-height: 100dvh;
+            align-items: center;
+        }
+
+        /* ================================ */
+        /* NAVBAR                           */
+        /* ================================ */
+        nav {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 40px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            /* Push links to the right */
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+            min-height: 70px;
+        }
+
+        .logo-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            pointer-events: none;
+            /* Allow clicks to pass through to buttons underneath if any overlap */
+            z-index: 1;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-family: 'Oswald', sans-serif;
+            color: var(--primary);
+            width: max-content;
+            pointer-events: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .nav-links a {
+            color: black;
+            background: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: var(--transition);
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        nav .logo-text h1:last-of-type {
+            font-size: 11px;
+            color: var(--primary);
+            opacity: 0.9;
+        }
+
+        .nav-contact:hover {
+            background: white;
+        }
+
+        /* ================================ */
+        /* MAIN CONTENT                     */
+        /* ================================ */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: 1200px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 500px;
+            max-width: 380px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255, 153, 0, 0.2));
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 0 15px rgba(255, 153, 0, 0.4));
+        }
+
+        .btn-action {
+            padding: 14px 28px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            background: #232f3e;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 2px solid transparent;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-action:hover {
+            background: var(--primary);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: black;
+            font-size: 24px;
+            padding: 16px 40px;
+            margin-top: 20px;
+            width: auto;
+            min-width: 280px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* SOCIAL FOOTER */
+        .social-bottom {
+            background: #111;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 20px 20px 40px;
+            flex-wrap: wrap;
+            border-top: 1px solid #333;
+        }
+
+        .social-bottom a {
+            color: #999;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .social-bottom a:hover {
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .social-bottom img {
+            height: 28px;
+            filter: grayscale(1);
+            transition: var(--transition);
+        }
+
+        .social-bottom a:hover img {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+        .footer-contact-btn {
+            background: var(--primary);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-contact-btn:hover {
+            background: white;
+        }
+
+        /* ================================ */
+        /* WINDOWS / DESKTOP VIEW           */
+        /* ================================ */
+        @media(min-width: 769px) {
+
+            .menu-btn,
+            .menu {
+                display: none;
+            }
+
+            nav {
+                justify-content: flex-end;
+            }
+
+            nav .logo-text {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            nav .logo-text h1 {
+                font-size: 24px;
+            }
+
+            .nav-contact {
+                display: none;
+            }
+
+            .nav-contact:hover {
+                background: white;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .logo-text h1 {
+                font-size: 18px;
+                /* Slightly bigger title */
+            }
+
+            html,
+            body {
+                overflow-y: auto;
+                /* Re-enable vertical scroll on mobile */
+            }
+
+            .nav-contact {
+                display: none;
+                /* Hide from mobile header */
+            }
+
+            nav .logo-text {
+                padding-right: 0;
+            }
+
+            .menu-btn {
+                display: block;
+                font-size: 30px;
+                /* Slightly bigger icon */
+                cursor: pointer;
+                margin-left: auto;
+                /* Push to the right */
+                z-index: 10;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: var(--nav-bg);
+                backdrop-filter: blur(15px);
+                border-radius: 12px;
+                overflow: hidden;
+                z-index: 1000;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu a {
+                color: white;
+                padding: 15px 25px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: var(--transition);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .menu a:hover {
+                background: var(--primary);
+                color: black;
+            }
+
+            .btn-action {
+                display: none;
+            }
+
+            .logo-container {
+                gap: 20px;
+            }
+
+            .logo {
+                max-width: 370px;
+                max-height: 50vh;
+                /* Prevent vertical overflow on mobile */
+                margin: 20px 0;
+            }
+
+            .btn-primary {
+                font-size: 18px;
+                width: 80%;
+                padding: 12px;
+            }
+
+            .footer-contact-btn {
+                display: none;
+            }
+        }
+
+        /* Floating Cart Button */
+        .floating-cart {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--secondary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1100;
+            transition: all 0.3s ease;
+        }
+
+        .floating-cart:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--primary);
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-text">
+            <h1>SMF GYM & SUPPLEMENTS</h1>
+            <h1>SRI BABU POWER LIFTING ACADEMY</h1>
+        </div>
+        <div class="nav-links">
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a href="about.html" onclick="toggleMenu()">ABOUT US</a>
+            <a href="contact.html" onclick="toggleMenu()">CONTACT US</a>
+            <a href="sample_workout_plan.pdf" target="_blank" onclick="toggleMenu()">WORKOUT</a>
+            <a href="Untitled%20document.pdf" target="_blank" onclick="toggleMenu()">SAMPLE DIET</a>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="logo-container">
+            <a class="btn-action" href="sample_workout_plan.pdf" target="_blank">WORKOUT</a>
+            <img class="logo" src="img/smf logo (1).png" alt="SMF Logo">
+            <a class="btn-action" href="Untitled%20document.pdf" target="_blank">SAMPLE DIET</a>
+        </div>
+        <div class="btn-primary" onclick="Products()">SUPPLEMENTS</div>
+    </div>
+
+    <div class="social-bottom">
+        <a href="https://www.instagram.com/sri_murali_fitness_smf/" target="_blank"><img src="img/Social=Instagram,Style=Original (1).svg" alt="Instagram"><span>INSTAGRAM</span></a>
+        <a href="https://www.facebook.com/share/15pZ8wV73r/?mibextid=wwXIfr" target="_blank"><img src="img/Social=Facebook,Style=Original (1).svg" alt="Facebook"><span>FACEBOOK</span></a>
+        <a href="https://wa.me/917339563621" target="_blank"><img src="img/Social=WhatsApp,Style=Original (1).svg" alt="WhatsApp"><span>WHATSAPP</span></a>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+
+</html>

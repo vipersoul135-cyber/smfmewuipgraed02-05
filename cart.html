@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="renderCartPage()">
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>YOUR SHOPPING CART</h2>
+    </div>
+
+    <div class="cart-list" id="cartItemsList">
+        <!-- Dynamic content will load here -->
+    </div>
+
+    <div class="cart-footer">
+        <h3>Subtotal: ₹<span id="subtotal">0</span></h3>
+        <button class="btn-order" onclick="checkoutWhatsApp()">Place Order via WhatsApp</button>
+        <div style="margin-top: 15px;">
+            <a href="products.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">← Continue Shopping</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

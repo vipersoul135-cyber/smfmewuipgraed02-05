@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whey Protein - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+
+    <h2 class="page-title">Whey Protein</h2>
+
+    <div class="controls-bar">
+        <span style="font-weight: 600; color: #666;">10 Products</span>
+        <div class="view-toggles">
+            <button id="viewToggle" class="toggle-btn" onclick="toggleView()">📋 List View</button>
+        </div>
+    </div>
+
+    <div class="products-container grid-view">
+        <!-- Product 1 -->
+        <div class="product-card" onclick="openProductModal('Whey Protein 1', ['img/whey/61ENBM9MPoL._AC_UL480_FMwebp_QL65_.webp', 'img/whey/61aknbuYJsL._AC_UL480_FMwebp_QL65_.webp'], 2400, 'Premium whey protein isolate for maximum muscle growth.')">
+            <img src="img/whey/61ENBM9MPoL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 1</h4>
+                <p class="price">₹2400</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 1', 2400, 'img/whey/61ENBM9MPoL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 2', ['img/whey/61aknbuYJsL._AC_UL480_FMwebp_QL65_.webp', 'img/whey/710yROu43XL._AC_SX644_CB1169409_QL70_.jpg'], 2450, 'High quality protein blend with delicious taste.')">
+            <img src="img/whey/61aknbuYJsL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 2</h4>
+                <p class="price">₹2450</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 2', 2450, 'img/whey/61aknbuYJsL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 3', ['img/whey/710yROu43XL._AC_SX644_CB1169409_QL70_.jpg'], 2500, 'Zero sugar, low fat protein supplement.')">
+            <img src="img/whey/710yROu43XL._AC_SX644_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Whey Protein 3</h4>
+                <p class="price">₹2500</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 3', 2500, 'img/whey/710yROu43XL._AC_SX644_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" onclick="openProductModal('Whey Protein 4', ['img/whey/71DnOZ6KEnL._AC_UL480_FMwebp_QL65_.webp'], 2550, 'Fast digesting protein for post-workout recovery.')">
+            <img src="img/whey/71DnOZ6KEnL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 4</h4>
+                <p class="price">₹2550</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 4', 2550, 'img/whey/71DnOZ6KEnL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 5', ['img/whey/71VnwikGbSL._AC_UL480_FMwebp_QL65_.webp'], 2600, 'Ultra-filtered whey protein concentrate.')">
+            <img src="img/whey/71VnwikGbSL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 5</h4>
+                <p class="price">₹2600</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 5', 2600, 'img/whey/71VnwikGbSL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 6', ['img/whey/71aaVOEsHLL._AC_UL480_FMwebp_QL65_.webp'], 2650, 'Purest protein source for muscle gain.')">
+            <img src="img/whey/71aaVOEsHLL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 6</h4>
+                <p class="price">₹2650</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 6', 2650, 'img/whey/71aaVOEsHLL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 7', ['img/whey/71pVltc07tL._AC_UL480_FMwebp_QL65_.webp'], 2700, 'Fuel your muscles with the best.')">
+            <img src="img/whey/71pVltc07tL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 7</h4>
+                <p class="price">₹2700</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 7', 2700, 'img/whey/71pVltc07tL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 8', ['img/whey/71tUN8gOByL._AC_SX644_CB1169409_QL70_.jpg'], 2750, 'Protein that works as hard as you do.')">
+            <img src="img/whey/71tUN8gOByL._AC_SX644_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Whey Protein 8</h4>
+                <p class="price">₹2750</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 8', 2750, 'img/whey/71tUN8gOByL._AC_SX644_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 9', ['img/whey/81+ZiNZWBkL._AC_UL480_FMwebp_QL65_.webp'], 2800, 'Superior amino acid profile.')">
+            <img src="img/whey/81+ZiNZWBkL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 9</h4>
+                <p class="price">₹2800</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 9', 2800, 'img/whey/81+ZiNZWBkL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Whey Protein 10', ['img/whey/61ENBM9MPoL._AC_UL480_FMwebp_QL65_.webp'], 3000, 'Ultimate post-workout formula.')">
+            <img src="img/whey/61ENBM9MPoL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Whey Protein 10</h4>
+                <p class="price">₹3000</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Whey Protein 10', 3000, 'img/whey/61ENBM9MPoL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="slider-container">
+                <button class="slider-btn left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="Product Detail">
+                <button class="slider-btn right" onclick="changeImage(1)">&#10095;</button>
+                <div id="imageCounter" style="position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:4px 8px; border-radius:10px; font-size:12px;">1 / 1</div>
+            </div>
+            <h2 id="modalName"></h2>
+            <p id="modalPrice" class="price"></p>
+            <p id="modalDesc" style="margin: 15px 0; color: #555; font-size: 14px;"></p>
+            <button class="btn-add" style="background:#ff9900" onclick="addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]); closeModal()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

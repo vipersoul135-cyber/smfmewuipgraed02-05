@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Gainer - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+
+    <h2 class="page-title">Mass Gainer</h2>
+
+    <div class="controls-bar">
+        <span style="font-weight: 600; color: #666;">10 Products</span>
+        <div class="view-toggles">
+            <button id="viewToggle" class="toggle-btn" onclick="toggleView()">📋 List View</button>
+        </div>
+    </div>
+
+    <div class="products-container grid-view">
+        <!-- Product 1 -->
+        <div class="product-card" onclick="openProductModal('Mass Gainer 1', ['img/mass gainer/51I+kxHCMQL._AC_UL480_FMwebp_QL65_.webp', 'img/mass gainer/51zsAomHVTL._AC_UL480_FMwebp_QL65_.webp'], 1800, 'High calorie formula for rapid mass gains.')">
+            <img src="img/mass gainer/51I+kxHCMQL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 1</h4>
+                <p class="price">₹1800</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 1', 1800, 'img/mass gainer/51I+kxHCMQL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 2', ['img/mass gainer/51zsAomHVTL._AC_UL480_FMwebp_QL65_.webp', 'img/mass gainer/613EOlA4XmL._AC_UL480_FMwebp_QL65_.webp'], 1850, 'Packed with protein and complex carbs.')">
+            <img src="img/mass gainer/51zsAomHVTL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 2</h4>
+                <p class="price">₹1850</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 2', 1850, 'img/mass gainer/51zsAomHVTL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 3', ['img/mass gainer/613EOlA4XmL._AC_UL480_FMwebp_QL65_.webp'], 1900, 'Perfect for hardgainers.')">
+            <img src="img/mass gainer/613EOlA4XmL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 3</h4>
+                <p class="price">₹1900</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 3', 1900, 'img/mass gainer/613EOlA4XmL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card" onclick="openProductModal('Mass Gainer 4', ['img/mass gainer/71Dm8ZHKQuL._AC_SX416_CB1169409_QL70_.jpg'], 1950, 'Massive gains in record time.')">
+            <img src="img/mass gainer/71Dm8ZHKQuL._AC_SX416_CB1169409_QL70_.jpg">
+            <div class="product-info">
+                <h4>Mass Gainer 4</h4>
+                <p class="price">₹1950</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 4', 1950, 'img/mass gainer/71Dm8ZHKQuL._AC_SX416_CB1169409_QL70_.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 5', ['img/mass gainer/71KYJiselvL._AC_UL480_FMwebp_QL65_.webp'], 2000, 'High quality mass building supplement.')">
+            <img src="img/mass gainer/71KYJiselvL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 5</h4>
+                <p class="price">₹2000</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 5', 2000, 'img/mass gainer/71KYJiselvL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 6', ['img/mass gainer/71ZfayW1afL._AC_UL480_FMwebp_QL65_.webp'], 2050, 'Ultimate size and strength.')">
+            <img src="img/mass gainer/71ZfayW1afL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 6</h4>
+                <p class="price">₹2050</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 6', 2050, 'img/mass gainer/71ZfayW1afL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 7', ['img/mass gainer/71ah17Y+-tL._AC_UL480_FMwebp_QL65_.webp'], 2100, 'Fuel your ambition.')">
+            <img src="img/mass gainer/71ah17Y+-tL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 7</h4>
+                <p class="price">₹2100</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 7', 2100, 'img/mass gainer/71ah17Y+-tL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 8', ['img/mass gainer/71c5-Z2wdZL._AC_UL480_FMwebp_QL65_.webp'], 2150, 'Heavy weight performance.')">
+            <img src="img/mass gainer/71c5-Z2wdZL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 8</h4>
+                <p class="price">₹2150</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 8', 2150, 'img/mass gainer/71c5-Z2wdZL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 9', ['img/mass gainer/71lqVBm9BgL._AC_UL480_FMwebp_QL65_.webp'], 2200, 'Power through the gain.')">
+            <img src="img/mass gainer/71lqVBm9BgL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 9</h4>
+                <p class="price">₹2200</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 9', 2200, 'img/mass gainer/71lqVBm9BgL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="openProductModal('Mass Gainer 10', ['img/mass gainer/71sm8eS7YbL._AC_UL480_FMwebp_QL65_.webp'], 2500, 'Elite size formula.')">
+            <img src="img/mass gainer/71sm8eS7YbL._AC_UL480_FMwebp_QL65_.webp">
+            <div class="product-info">
+                <h4>Mass Gainer 10</h4>
+                <p class="price">₹2500</p>
+                <button class="btn-add" onclick="event.stopPropagation(); addToCart('Mass Gainer 10', 2500, 'img/mass gainer/71sm8eS7YbL._AC_UL480_FMwebp_QL65_.webp')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="slider-container">
+                <button class="slider-btn left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="Product Detail">
+                <button class="slider-btn right" onclick="changeImage(1)">&#10095;</button>
+                <div id="imageCounter" style="position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:4px 8px; border-radius:10px; font-size:12px;">1 / 1</div>
+            </div>
+            <h2 id="modalName"></h2>
+            <p id="modalPrice" class="price"></p>
+            <p id="modalDesc" style="margin: 15px 0; color: #555; font-size: 14px;"></p>
+            <button class="btn-add" style="background:#ff9900" onclick="addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]); closeModal()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

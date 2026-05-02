@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatine - SMF Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="products.html" class="back-btn">⬅</a>
+        <h2>SMF SUPPLEMENTS</h2>
+    </div>
+
+    <h2 class="page-title">Creatine</h2>
+
+    <div class="controls-bar">
+        <span style="font-weight: 600; color: #666;">10 Products</span>
+        <div class="view-toggles">
+            <button id="viewToggle" class="toggle-btn" onclick="toggleView()">📋 List View</button>
+        </div>
+    </div>
+
+    <div class="products-container grid-view">
+        <!-- Product 1 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 1', ['img/creatine/51iFEJMDnrL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/610LDse-5HL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61MiuDBX8sL._AC_UL480_FMwebp_QL65_.webp'], 1050, 'Pure micronized creatine monohydrate for increased strength and power.')">
+            <img src="img/creatine/51iFEJMDnrL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 1">
+            <div class="product-info">
+                <h4>Creatine 1</h4>
+                <p class="price">₹1050</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 1', 1050, 'img/creatine/51iFEJMDnrL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 2', ['img/creatine/610LDse-5HL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61MiuDBX8sL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61afKxZQzJL._AC_UL480_FMwebp_QL65_.webp'], 1100, 'Ultra-pure creatine to boost performance during high-intensity training.')">
+            <img src="img/creatine/610LDse-5HL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 2">
+            <div class="product-info">
+                <h4>Creatine 2</h4>
+                <p class="price">₹1100</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 2', 1100, 'img/creatine/610LDse-5HL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 3', ['img/creatine/61MiuDBX8sL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61afKxZQzJL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61anUefR1GL._AC_UL480_FMwebp_QL65_.webp'], 1150, 'Enhances muscle volume and ATP production for more reps.')">
+            <img src="img/creatine/61MiuDBX8sL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 3">
+            <div class="product-info">
+                <h4>Creatine 3</h4>
+                <p class="price">₹1150</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 3', 1150, 'img/creatine/61MiuDBX8sL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 4', ['img/creatine/61afKxZQzJL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61anUefR1GL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61mtlsOQTyL._AC_UL480_FMwebp_QL65_.webp'], 1200, 'Fast-absorbing creatine formula for post-workout recovery.')">
+            <img src="img/creatine/61afKxZQzJL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 4">
+            <div class="product-info">
+                <h4>Creatine 4</h4>
+                <p class="price">₹1200</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 4', 1200, 'img/creatine/61afKxZQzJL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 5', ['img/creatine/61anUefR1GL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61mtlsOQTyL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61wjFG11W+L._AC_UL480_FMwebp_QL65_.webp'], 1250, 'Premium grade creatine for maximum gains.')">
+            <img src="img/creatine/61anUefR1GL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 5">
+            <div class="product-info">
+                <h4>Creatine 5</h4>
+                <p class="price">₹1250</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 5', 1250, 'img/creatine/61anUefR1GL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 6', ['img/creatine/61mtlsOQTyL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/61wjFG11W+L._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/715y076uhRL._AC_UL480_FMwebp_QL65_.webp'], 1300, 'Micro-ionized for fast solubility and absorption.')">
+            <img src="img/creatine/61mtlsOQTyL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 6">
+            <div class="product-info">
+                <h4>Creatine 6</h4>
+                <p class="price">₹1300</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 6', 1300, 'img/creatine/61mtlsOQTyL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 7', ['img/creatine/61wjFG11W+L._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/715y076uhRL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/71GSfY30BrL._AC_UL480_FMwebp_QL65_.webp'], 1350, 'Purest form of creatine monohydrate.')">
+            <img src="img/creatine/61wjFG11W+L._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 7">
+            <div class="product-info">
+                <h4>Creatine 7</h4>
+                <p class="price">₹1350</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 7', 1350, 'img/creatine/61wjFG11W+L._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 8', ['img/creatine/715y076uhRL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/71GSfY30BrL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/71T1wYyMNdL._AC_UL480_FMwebp_QL65_.webp'], 1400, 'Trusted by athletes worldwide.')">
+            <img src="img/creatine/715y076uhRL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 8">
+            <div class="product-info">
+                <h4>Creatine 8</h4>
+                <p class="price">₹1400</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 8', 1400, 'img/creatine/715y076uhRL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 9', ['img/creatine/71GSfY30BrL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/71T1wYyMNdL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/51iFEJMDnrL._AC_UL480_FMwebp_QL65_.webp'], 1450, 'The gold standard for creatine monohydrate.')">
+            <img src="img/creatine/71GSfY30BrL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 9">
+            <div class="product-info">
+                <h4>Creatine 9</h4>
+                <p class="price">₹1450</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 9', 1450, 'img/creatine/71GSfY30BrL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-card"
+            onclick="openProductModal('Creatine 10', ['img/creatine/71T1wYyMNdL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/51iFEJMDnrL._AC_UL480_FMwebp_QL65_.webp', 'img/creatine/610LDse-5HL._AC_UL480_FMwebp_QL65_.webp'], 1500, 'Ultimate performance booster.')">
+            <img src="img/creatine/71T1wYyMNdL._AC_UL480_FMwebp_QL65_.webp" alt="Creatine 10">
+            <div class="product-info">
+                <h4>Creatine 10</h4>
+                <p class="price">₹1500</p>
+                <button class="btn-add"
+                    onclick="event.stopPropagation(); addToCart('Creatine 10', 1500, 'img/creatine/71T1wYyMNdL._AC_UL480_FMwebp_QL65_.webp')">Add
+                    to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" onclick="location.href='cart.html'">
+        <i data-lucide="shopping-cart"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="slider-container">
+                <button class="slider-btn left" onclick="changeImage(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="Product Detail">
+                <button class="slider-btn right" onclick="changeImage(1)">&#10095;</button>
+                <div id="imageCounter"
+                    style="position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.5); color:#fff; padding:4px 8px; border-radius:10px; font-size:12px;">
+                    1 / 1</div>
+            </div>
+            <h2 id="modalName"></h2>
+            <p id="modalPrice" class="price"></p>
+            <p id="modalDesc" style="margin: 15px 0; color: #555; font-size: 14px;"></p>
+            <button class="btn-add" style="background:#ff9900"
+                onclick="addToCart(currentProduct.name, currentProduct.price, currentProduct.images[0]); closeModal()">Add
+                to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
